@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- Source for og.png. Regenerate with the Chrome command in the repo README. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PayDrift — social card source</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    background: #08090c;
+    color: #f5f8fa;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .glow { position: absolute; border-radius: 50%; filter: blur(110px); }
+  .glow--a { width: 620px; height: 620px; left: -140px; top: -190px; background: rgba(43,212,143,.30); }
+  .glow--b { width: 520px; height: 520px; right: -60px;  bottom: -230px; background: rgba(53,201,216,.22); }
+  .glow--c { width: 420px; height: 420px; right: 260px;  top: -160px; background: rgba(112,130,255,.16); }
+
+  .grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 60px 60px;
+    -webkit-mask-image: radial-gradient(90% 80% at 20% 20%, #000, transparent 75%);
+            mask-image: radial-gradient(90% 80% at 20% 20%, #000, transparent 75%);
+  }
+
+  .wrap {
+    position: relative; height: 100%;
+    display: grid; grid-template-columns: 1fr 372px; gap: 56px; align-items: center;
+    padding: 64px 68px;
+  }
+
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand svg { width: 40px; height: 40px; color: #2bd48f; }
+  .brand span { font-size: 30px; font-weight: 700; letter-spacing: -.03em; }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 63px; line-height: 1.06; font-weight: 700; letter-spacing: -.042em;
+    max-width: 14.2em;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(96deg, #7ff0c4, #2bd48f 52%, #35c9d8);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { margin-top: 26px; font-size: 25px; line-height: 1.45; color: #c1c9d4; max-width: 20.5em; letter-spacing: -.014em; }
+
+  .tags { display: flex; gap: 10px; margin-top: 40px; }
+  .tag {
+    padding: 9px 18px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04);
+    font-size: 18px; font-weight: 600; color: #c1c9d4;
+  }
+
+  .card {
+    padding: 34px 32px 30px;
+    border-radius: 30px;
+    background: #0e1116;
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: 0 50px 100px -30px rgba(0,0,0,.9);
+  }
+  .card__top { display: flex; align-items: center; justify-content: space-between; }
+  .card__label { font-size: 17px; font-weight: 600; color: #9aa4b2; }
+  .live {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 13px; border-radius: 999px;
+    background: rgba(43,212,143,.13); color: #2bd48f; font-size: 15px; font-weight: 650;
+  }
+  .live i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+  .amount { margin-top: 20px; font-size: 66px; font-weight: 700; letter-spacing: -.045em; line-height: 1; }
+  .amount .cur { font-size: 38px; vertical-align: .42em; color: #9aa4b2; margin-right: 4px; }
+  .amount .cents { font-size: 33px; color: #9aa4b2; }
+  .rate { margin-top: 14px; font-size: 17px; color: #9aa4b2; }
+
+  .track { margin-top: 26px; height: 9px; border-radius: 999px; background: rgba(255,255,255,.09); overflow: hidden; }
+  .track i { display: block; height: 100%; width: 64%; border-radius: 999px; background: linear-gradient(90deg, #12a877, #2bd48f); }
+
+  .pay { margin-top: 22px; padding: 18px 20px; border-radius: 18px; background: #171b22; border: 1px solid rgba(255,255,255,.09); }
+  .pay p { font-size: 15px; font-weight: 600; color: #9aa4b2; }
+  .pay div { display: flex; gap: 18px; margin-top: 8px; align-items: baseline; }
+  .pay b { font-size: 30px; font-weight: 700; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+  .pay s { text-decoration: none; font-size: 17px; color: #9aa4b2; font-weight: 600; margin-left: 2px; }
+</style>
+</head>
+<body>
+  <div class="glow glow--a"></div>
+  <div class="glow glow--b"></div>
+  <div class="glow glow--c"></div>
+  <div class="grid"></div>
+
+  <div class="wrap">
+    <div>
+      <div class="brand">
+        <svg viewBox="3 0.5 28.5 28.5" aria-hidden="true">
+          <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M12 20 25 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="28.4" cy="3.6" r="2.5" fill="currentColor"/>
+        </svg>
+        <span>PayDrift</span>
+      </div>
+
+      <h1>Know exactly what<br>you&rsquo;re earning,<br><em>hour by hour</em>.</h1>
+      <p class="sub">Live earnings for the pay period you&rsquo;re in, and a countdown to the day you get paid.</p>
+
+      <div class="tags">
+        <span class="tag">No ads</span>
+        <span class="tag">No subscriptions</span>
+        <span class="tag">Private by design</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__top">
+        <span class="card__label">This pay period</span>
+        <span class="live"><i></i>Clocked in</span>
+      </div>
+
+      <p class="amount"><span class="cur">$</span>1,247<span class="cents">.46</span></p>
+      <p class="rate">$24.50 / hr &middot; 50h 55m logged</p>
+
+      <div class="track"><i></i></div>
+
+      <div class="pay">
+        <p>Payday in</p>
+        <div>
+          <b>04<s>d</s></b><b>11<s>h</s></b><b>26<s>m</s></b>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

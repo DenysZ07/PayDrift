@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PayDrift">
+  <defs>
+    <linearGradient id="f-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ADFA0"/>
+      <stop offset=".52" stop-color="#12A877"/>
+      <stop offset="1" stop-color="#05613F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="url(#f-bg)"/>
+
+  <g transform="translate(32 32) scale(1.72) translate(-17.225 -14.775)">
+    <g fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round">
+      <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24"/>
+      <path d="M12 20 25 7"/>
+    </g>
+    <circle cx="28.4" cy="3.6" r="2.6" fill="#ffffff"/>
+  </g>
+</svg>

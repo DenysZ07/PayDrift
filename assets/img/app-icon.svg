@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PayDrift">
+  <defs>
+    <linearGradient id="pd-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ADFA0"/>
+      <stop offset=".52" stop-color="#12A877"/>
+      <stop offset="1" stop-color="#05613F"/>
+    </linearGradient>
+    <linearGradient id="pd-sheen" x1=".2" y1="0" x2=".6" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="114" fill="url(#pd-bg)"/>
+  <rect width="512" height="512" rx="114" fill="url(#pd-sheen)"/>
+
+  <!-- The dial of hours, opened where the earnings drift out of it.
+       Drawn in a 32-unit space and centred on its own bounding box. -->
+  <g transform="translate(256 256) scale(13) translate(-17.225 -14.775)">
+    <g fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round">
+      <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24"/>
+      <path d="M12 20 25 7"/>
+    </g>
+    <circle cx="28.4" cy="3.6" r="2.5" fill="#ffffff"/>
+  </g>
+</svg>
