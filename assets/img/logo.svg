@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="204 204 616 616" role="img" aria-label="PayDrift">
+  <defs>
+    <radialGradient id="pdCoin" cx="32%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </radialGradient>
+  </defs>
+  <g transform="rotate(-9 512 512)">
+    <circle cx="512" cy="512" r="302" fill="url(#pdCoin)"/>
+    <circle cx="512" cy="512" r="274" fill="none" stroke="#0f766e" stroke-width="5" opacity=".4"/>
+    <path d="M280 512C372 432 436 592 512 512 588 432 652 592 744 512" fill="none" stroke="#134e4a" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M280 503C372 423 436 583 512 503 588 423 652 583 744 503" fill="none" stroke="#99f6e4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+  </g>
+</svg>

@@ -1,26 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PayDrift">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="PayDrift">
   <defs>
-    <linearGradient id="pd-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3ADFA0"/>
-      <stop offset=".52" stop-color="#12A877"/>
-      <stop offset="1" stop-color="#05613F"/>
+    <linearGradient id="pdIconBg" x1="0" y1="0" x2=".35" y2="1">
+      <stop offset="0" stop-color="#fbfdfd"/>
+      <stop offset="1" stop-color="#e3eff2"/>
     </linearGradient>
-    <linearGradient id="pd-sheen" x1=".2" y1="0" x2=".6" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
-      <stop offset=".55" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
+    <radialGradient id="pdIconCoin" cx="32%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </radialGradient>
+    <filter id="pdIconShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity=".35"/>
+    </filter>
   </defs>
 
-  <rect width="512" height="512" rx="114" fill="url(#pd-bg)"/>
-  <rect width="512" height="512" rx="114" fill="url(#pd-sheen)"/>
+  <rect width="1024" height="1024" rx="228" fill="url(#pdIconBg)"/>
 
-  <!-- The dial of hours, opened where the earnings drift out of it.
-       Drawn in a 32-unit space and centred on its own bounding box. -->
-  <g transform="translate(256 256) scale(13) translate(-17.225 -14.775)">
-    <g fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round">
-      <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24"/>
-      <path d="M12 20 25 7"/>
-    </g>
-    <circle cx="28.4" cy="3.6" r="2.5" fill="#ffffff"/>
+  <g transform="rotate(-9 512 512)">
+    <circle cx="512" cy="512" r="302" fill="url(#pdIconCoin)" filter="url(#pdIconShadow)"/>
+    <circle cx="512" cy="512" r="274" fill="none" stroke="#0f766e" stroke-width="5" opacity=".4"/>
+    <path d="M280 512C372 432 436 592 512 512 588 432 652 592 744 512" fill="none" stroke="#134e4a" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M280 503C372 423 436 583 512 503 588 423 652 583 744 503" fill="none" stroke="#99f6e4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
   </g>
 </svg>

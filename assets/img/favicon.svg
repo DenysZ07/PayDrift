@@ -1,19 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PayDrift">
   <defs>
-    <linearGradient id="f-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3ADFA0"/>
-      <stop offset=".52" stop-color="#12A877"/>
-      <stop offset="1" stop-color="#05613F"/>
-    </linearGradient>
+    <radialGradient id="fCoin" cx="32%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </radialGradient>
   </defs>
-
-  <rect width="64" height="64" rx="15" fill="url(#f-bg)"/>
-
-  <g transform="translate(32 32) scale(1.72) translate(-17.225 -14.775)">
-    <g fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round">
-      <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24"/>
-      <path d="M12 20 25 7"/>
-    </g>
-    <circle cx="28.4" cy="3.6" r="2.6" fill="#ffffff"/>
+  <rect width="64" height="64" rx="14" fill="#f4f8fa"/>
+  <!-- the coin, drawn in its native 1024 space and fitted to the 64px box -->
+  <g transform="translate(32 32) scale(.0975) rotate(-9) translate(-512 -512)">
+    <circle cx="512" cy="512" r="302" fill="url(#fCoin)"/>
+    <path d="M280 512C372 432 436 592 512 512 588 432 652 592 744 512" fill="none" stroke="#134e4a" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

@@ -16,9 +16,9 @@
   }
 
   .glow { position: absolute; border-radius: 50%; filter: blur(110px); }
-  .glow--a { width: 620px; height: 620px; left: -140px; top: -190px; background: rgba(43,212,143,.30); }
-  .glow--b { width: 520px; height: 520px; right: -60px;  bottom: -230px; background: rgba(53,201,216,.22); }
-  .glow--c { width: 420px; height: 420px; right: 260px;  top: -160px; background: rgba(112,130,255,.16); }
+  .glow--a { width: 620px; height: 620px; left: -140px; top: -190px; background: rgba(45,212,191,.30); }
+  .glow--b { width: 520px; height: 520px; right: -60px;  bottom: -230px; background: rgba(34,211,238,.22); }
+  .glow--c { width: 420px; height: 420px; right: 260px;  top: -160px; background: rgba(56,182,214,.16); }
 
   .grid {
     position: absolute; inset: 0;
@@ -36,7 +36,7 @@
   }
 
   .brand { display: flex; align-items: center; gap: 14px; }
-  .brand svg { width: 40px; height: 40px; color: #2bd48f; }
+  .brand img { width: 46px; height: 46px; }
   .brand span { font-size: 30px; font-weight: 700; letter-spacing: -.03em; }
 
   h1 {
@@ -46,10 +46,10 @@
   }
   h1 em {
     font-style: normal;
-    background: linear-gradient(96deg, #7ff0c4, #2bd48f 52%, #35c9d8);
+    background: linear-gradient(96deg, #99f6e4, #2dd4bf 52%, #22d3ee);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  .sub { margin-top: 26px; font-size: 25px; line-height: 1.45; color: #c1c9d4; max-width: 20.5em; letter-spacing: -.014em; }
+  .sub { margin-top: 24px; font-size: 25px; line-height: 1.45; color: #c1c9d4; max-width: 20.5em; letter-spacing: -.014em; }
 
   .tags { display: flex; gap: 10px; margin-top: 40px; }
   .tag {
@@ -58,35 +58,20 @@
     font-size: 18px; font-weight: 600; color: #c1c9d4;
   }
 
-  .card {
-    padding: 34px 32px 30px;
-    border-radius: 30px;
-    background: #0e1116;
-    border: 1px solid rgba(255,255,255,.10);
-    box-shadow: 0 50px 100px -30px rgba(0,0,0,.9);
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .jc {
+    padding: 22px 24px 24px; border-radius: 26px;
+    background: #ffffff; color: #122026;
+    box-shadow: 0 40px 80px -30px rgba(0,0,0,.85);
   }
-  .card__top { display: flex; align-items: center; justify-content: space-between; }
-  .card__label { font-size: 17px; font-weight: 600; color: #9aa4b2; }
-  .live {
-    display: flex; align-items: center; gap: 8px;
-    padding: 6px 13px; border-radius: 999px;
-    background: rgba(43,212,143,.13); color: #2bd48f; font-size: 15px; font-weight: 650;
-  }
-  .live i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-
-  .amount { margin-top: 20px; font-size: 66px; font-weight: 700; letter-spacing: -.045em; line-height: 1; }
-  .amount .cur { font-size: 38px; vertical-align: .42em; color: #9aa4b2; margin-right: 4px; }
-  .amount .cents { font-size: 33px; color: #9aa4b2; }
-  .rate { margin-top: 14px; font-size: 17px; color: #9aa4b2; }
-
-  .track { margin-top: 26px; height: 9px; border-radius: 999px; background: rgba(255,255,255,.09); overflow: hidden; }
-  .track i { display: block; height: 100%; width: 64%; border-radius: 999px; background: linear-gradient(90deg, #12a877, #2bd48f); }
-
-  .pay { margin-top: 22px; padding: 18px 20px; border-radius: 18px; background: #171b22; border: 1px solid rgba(255,255,255,.09); }
-  .pay p { font-size: 15px; font-weight: 600; color: #9aa4b2; }
-  .pay div { display: flex; gap: 18px; margin-top: 8px; align-items: baseline; }
-  .pay b { font-size: 30px; font-weight: 700; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
-  .pay s { text-decoration: none; font-size: 17px; color: #9aa4b2; font-weight: 600; margin-left: 2px; }
+  .jc__name { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+  .jc__name i { width: 12px; height: 12px; border-radius: 50%; }
+  .jc__label { margin-top: 7px; font-size: 17px; color: #4a5a63; }
+  .jc__amount { margin-top: 2px; font-size: 44px; font-weight: 800; letter-spacing: -.035em; line-height: 1.1; }
+  .jc__sched { margin-top: 6px; font-size: 16px; font-weight: 600; color: #b4530a; }
+  .jc__meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; font-size: 16px; color: #4a5a63; }
+  .jc__bar { display: block; height: 7px; margin-top: 15px; border-radius: 999px; background: #e4e7e9; overflow: hidden; }
+  .jc__bar i { display: block; height: 100%; border-radius: 999px; }
 </style>
 </head>
 <body>
@@ -98,11 +83,7 @@
   <div class="wrap">
     <div>
       <div class="brand">
-        <svg viewBox="3 0.5 28.5 28.5" aria-hidden="true">
-          <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-          <path d="M12 20 25 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-          <circle cx="28.4" cy="3.6" r="2.5" fill="currentColor"/>
-        </svg>
+<img src="logo.svg" width="46" height="46" alt="">
         <span>PayDrift</span>
       </div>
 
@@ -116,22 +97,20 @@
       </div>
     </div>
 
-    <div class="card">
-      <div class="card__top">
-        <span class="card__label">This pay period</span>
-        <span class="live"><i></i>Clocked in</span>
+    <div class="stack">
+      <div class="jc">
+        <p class="jc__name"><i style="background:#1e794f"></i>Riverside Café</p>
+        <p class="jc__label">Earned this period</p>
+        <p class="jc__amount">£90.63</p>
+        <p class="jc__meta"><span>7h 15m paid</span><span>Payday in 2 weeks</span></p>
+        <span class="jc__bar"><i style="width:86%;background:#1e794f"></i></span>
       </div>
-
-      <p class="amount"><span class="cur">$</span>1,247<span class="cents">.46</span></p>
-      <p class="rate">$24.50 / hr &middot; 50h 55m logged</p>
-
-      <div class="track"><i></i></div>
-
-      <div class="pay">
-        <p>Payday in</p>
-        <div>
-          <b>04<s>d</s></b><b>11<s>h</s></b><b>26<s>m</s></b>
-        </div>
+      <div class="jc">
+        <p class="jc__name"><i style="background:#2f6fed"></i>Grocery Store</p>
+        <p class="jc__label">Earned this period</p>
+        <p class="jc__amount">£71.05</p>
+        <p class="jc__sched">+ 12h 15m scheduled (&asymp; £174.07)</p>
+        <span class="jc__bar"><i style="width:32%;background:#2f6fed"></i></span>
       </div>
     </div>
   </div>

@@ -11,7 +11,7 @@ privacy.html          privacy policy
 support.html          support / troubleshooting
 assets/css/style.css  all styles (light + dark themes)
 assets/js/main.js     theme toggle, nav, reveal-on-scroll, the live app screen
-assets/img/           app icon, favicon, social card (+ its HTML source)
+assets/img/           logo, app icon, favicon, social card (+ its HTML source)
 ```
 
 ## Preview locally
@@ -46,6 +46,7 @@ point a custom domain at it, add a `CNAME` file and update the `<link rel="canon
 |---|---|---|
 | **App Store URL** | `index.html`, two links marked `<!-- TODO -->` | Currently `https://apps.apple.com/app/paydrift`, which is a placeholder |
 | **Support email** | all three pages, `support@paydrift.app` | Replace with the address you actually read |
+| **Demo data** | `index.html`, the device mockups | Job names, amounts and the £ currency are illustrative. Swap in your own if you'd rather show real numbers |
 | **App Store badge** | the two `.appstore` buttons | The button is a hand-built stand-in. Apple asks that you use its official badge — grab it from [Apple's marketing resources](https://developer.apple.com/app-store/marketing/guidelines/) and drop it in |
 | **Privacy policy** | `privacy.html` | Written to match how you described the app (no accounts, no servers, iCloud private database, no analytics). **Read it and make sure every sentence is true of the shipping build** — if you ever add crash reporting or analytics, this page has to say so |
 | **Last-updated date** | `privacy.html`, the `<time>` element | Bump it whenever the policy changes |
@@ -61,20 +62,23 @@ media query, and `:root[data-theme="dark"]` so the in-page toggle wins in both d
 The toggle stores its choice in `localStorage` and clears it when you land back on the system
 setting.
 
-**The app screen in the hero is live.** `main.js` works out the next payday (Friday at 5pm),
-derives the pay period from it, and drives the earnings figure, the hours, the progress bar,
-the countdown and the recent-shift dates off that one clock — so the numbers stay consistent
-with each other and never look stale. Pay rate and period length are constants at the top of
-that section if you want them to match your own screenshots.
+**The device mockups are rebuilt from the shipping app**, not invented: the Overview screen's
+layout, its per-job cards, the teal accent (`#0e7490`) and the job dot colours are all taken
+from a real screenshot. The demo data is in pounds and internally consistent — £90.63 is exactly
+7h 15m at £12.50/hr, and the £174.07 of scheduled work on the second card is 12h 15m at its own
+rate. The first card's figure and hours tick upward from a single clock in `main.js`, so the
+screen is never frozen; `RATE` and `baseHours` at the top of that block are the only two numbers
+to change.
 
 **Accessibility.** Both device mockups are `role="img"` with a label describing what they
 show, so screen readers get the meaning rather than a pile of fake UI text. Motion respects
 `prefers-reduced-motion`, and the reveal-on-scroll effect is only armed when JavaScript runs,
 so the page is fully readable without it.
 
-**Chart colours are validated, not eyeballed.** The bars in the insights panel use a single
-hue: `#12a877` for the current week and `#2a5f4e` for prior weeks, both checked against the
-`#0e1116` panel surface for lightness band, chroma and contrast.
+**Chart colours are validated, not eyeballed.** The bars in the analytics panel use a single
+hue: `#0e7490` for the current week and `#38b6d6` for prior weeks, checked as an ordinal ramp
+against the white panel surface — monotone lightness, a visible step between them, and a light
+end that still clears the surface.
 
 ## Regenerating the social card
 

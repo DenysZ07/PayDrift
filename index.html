@@ -53,11 +53,7 @@
 <header class="site-header" id="siteHeader">
   <div class="container site-header__inner">
     <a class="brand" href="index.html" aria-label="PayDrift home">
-      <svg class="brand__mark" viewBox="3 0.5 28.5 28.5" aria-hidden="true" focusable="false">
-        <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M12 20 25 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-        <circle cx="28.4" cy="3.6" r="2.5" fill="currentColor"/>
-      </svg>
+      <img class="brand__mark" src="assets/img/logo.svg" alt="" width="30" height="30">
       <span class="brand__name">PayDrift</span>
     </a>
 
@@ -118,11 +114,11 @@
       </div>
 
       <div class="hero__art">
-        <div class="device" role="img" aria-label="The PayDrift app screen: live earnings for the current pay period, ticking up while you are clocked in, above a pay-period progress bar, a live countdown to payday, and a list of recently logged shifts.">
+        <div class="device" role="img" aria-label="The PayDrift Overview screen, with one card per job: Riverside Café showing £90.63 earned this period, 7 hours 15 minutes paid and payday in 2 weeks; Grocery Store showing £71.05 with a further 12 hours 15 minutes scheduled, worth about £174.07; and Weekend Bar showing £50.00. Below them sit a Log hours button and the Home, Analytics and Settings tabs.">
           <div class="device__frame">
             <div class="device__screen">
               <div class="statusbar">
-                <span class="statusbar__time">9:41</span>
+                <span class="statusbar__time">13:08</span>
                 <span class="statusbar__icons">
                   <svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
                   <svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 10.4 6.1 8.5a2.7 2.7 0 0 1 3.8 0Zm0-4.2a5.7 5.7 0 0 0-4 1.6L2.6 6.4a7.7 7.7 0 0 1 10.8 0L12 7.8a5.7 5.7 0 0 0-4-1.6Zm0-4.2a9.7 9.7 0 0 0-6.9 2.8L-.3 3.4a11.7 11.7 0 0 1 16.6 0l-1.4 1.4A9.7 9.7 0 0 0 8 2Z"/></svg>
@@ -130,74 +126,87 @@
                 </span>
               </div>
 
-              <div class="app">
-                <div class="app__topline">
-                  <div>
-                    <p class="app__label">This pay period</p>
-                    <p class="app__range">Aug 1 &ndash; Aug 15</p>
-                  </div>
-                  <span class="pill pill--live"><span class="pill__dot"></span>Clocked in</span>
-                </div>
-
-                <p class="earnings" id="earnings">
-                  <span class="earnings__cur">$</span><span class="earnings__whole" id="earningsWhole">1,247</span><span class="earnings__cents">.<span id="earningsCents">46</span></span>
-                </p>
-                <p class="earnings__sub">$24.50 / hr &middot; 50h 55m logged</p>
-
-                <div class="progress">
-                  <div class="progress__head">
-                    <span>Pay period progress</span>
-                    <span id="periodPct">64%</span>
-                  </div>
-                  <div class="progress__track"><div class="progress__fill" id="periodFill" style="width:64%"></div></div>
-                </div>
-
-                <div class="countdown">
-                  <p class="countdown__label">Payday in</p>
-                  <p class="countdown__value" id="countdown">
-                    <span class="cd"><b id="cdD">04</b><i>d</i></span><span class="cd"><b id="cdH">11</b><i>h</i></span><span class="cd"><b id="cdM">26</b><i>m</i></span><span class="cd"><b id="cdS">09</b><i>s</i></span>
-                  </p>
-                </div>
-
-                <p class="shifts__head">Recent shifts</p>
-                <ul class="shifts">
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Thu</b>Aug 6</span>
-                    <span class="shifts__time">08:00 &ndash; 16:30</span>
-                    <span class="shifts__pay">$208.25</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Wed</b>Aug 5</span>
-                    <span class="shifts__time">09:00 &ndash; 15:00</span>
-                    <span class="shifts__pay">$147.00</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Tue</b>Aug 4</span>
-                    <span class="shifts__time">08:00 &ndash; 17:00</span>
-                    <span class="shifts__pay">$220.50</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Mon</b>Aug 3</span>
-                    <span class="shifts__time">12:00 &ndash; 20:00</span>
-                    <span class="shifts__pay">$196.00</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Fri</b>Jul 31</span>
-                    <span class="shifts__time">08:00 &ndash; 15:30</span>
-                    <span class="shifts__pay">$183.75</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Thu</b>Jul 30</span>
-                    <span class="shifts__time">07:00 &ndash; 15:00</span>
-                    <span class="shifts__pay">$196.00</span>
-                  </li>
-                  <li class="shifts__row">
-                    <span class="shifts__day"><b>Wed</b>Jul 29</span>
-                    <span class="shifts__time">09:00 &ndash; 16:00</span>
-                    <span class="shifts__pay">$171.50</span>
-                  </li>
-                </ul>
+              <div class="appbar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="4.8" width="17.6" height="16" rx="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3.2 9.6h17.6M8 3v3.6M16 3v3.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><g fill="currentColor"><circle cx="7.8" cy="13" r="1"/><circle cx="12" cy="13" r="1"/><circle cx="16.2" cy="13" r="1"/><circle cx="7.8" cy="16.8" r="1"/><circle cx="12" cy="16.8" r="1"/></g></svg>
+                <span class="appbar__title">Overview</span>
+                <svg class="appbar__end" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a5.9 5.9 0 0 0-5.9 5.9c0 4.6-1.7 5.5-1.7 6.9h15.2c0-1.4-1.7-2.3-1.7-6.9A5.9 5.9 0 0 0 12 3.4Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.7 19.2a2.4 2.4 0 0 0 4.6 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
               </div>
+
+              <div class="feed">
+                <article class="job job--green">
+                  <p class="job__name"><span class="job__dot"></span>Riverside Café</p>
+                  <p class="job__label">Earned this period</p>
+                  <p class="job__amount">£<span id="jobAmount">90.63</span></p>
+                  <p class="job__meta">
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.2V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      <span><span id="jobHours">7h 15m</span> paid</span>
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.4 9.6h17.2M8 3.2v3.4M16 3.2v3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                      Payday in 2 weeks
+                    </span>
+                  </p>
+                  <span class="job__bar"><i style="width:86%"></i></span>
+                </article>
+
+                <article class="job job--blue">
+                  <p class="job__name"><span class="job__dot"></span>Grocery Store</p>
+                  <p class="job__label">Earned this period</p>
+                  <p class="job__amount">£71.05</p>
+                  <p class="job__sched">+ 12h 15m scheduled (&asymp; £174.07)</p>
+                  <p class="job__meta">
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.2V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      5h paid
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.4 9.6h17.2M8 3.2v3.4M16 3.2v3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                      Payday in 4 weeks
+                    </span>
+                  </p>
+                  <span class="job__bar"><i style="width:32%"></i></span>
+                </article>
+
+                <article class="job job--orange">
+                  <p class="job__name"><span class="job__dot"></span>Weekend Bar</p>
+                  <p class="job__label">Earned this period</p>
+                  <p class="job__amount">£50.00</p>
+                  <p class="job__meta">
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.2V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      2h 30m paid
+                    </span>
+                    <span>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.4 9.6h17.2M8 3.2v3.4M16 3.2v3.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                      Payday next week
+                    </span>
+                  </p>
+                  <span class="job__bar"><i style="width:81%"></i></span>
+                </article>
+              </div>
+
+              <div class="applog">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5.4v13.2M5.4 12h13.2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  Log hours
+                </span>
+              </div>
+
+              <nav class="tabbar">
+                <span class="is-on">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 2.9 10.3v10.9h6.2v-5.6h5.8v5.6h6.2V10.3Z" fill="currentColor"/></svg>
+                  Home
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><rect x="3.4" y="12.4" width="4.4" height="8.2" rx="1.4"/><rect x="9.8" y="7.8" width="4.4" height="12.8" rx="1.4"/><rect x="16.2" y="3.4" width="4.4" height="17.2" rx="1.4"/></g></svg>
+                  Analytics
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 0-.13-1.4l2.06-1.6-2-3.46-2.44 1a8 8 0 0 0-2.42-1.4L14.7 2.6h-4l-.37 2.54a8 8 0 0 0-2.42 1.4l-2.44-1-2 3.46 2.06 1.6a8 8 0 0 0 0 2.8l-2.06 1.6 2 3.46 2.44-1a8 8 0 0 0 2.42 1.4l.37 2.54h4l.37-2.54a8 8 0 0 0 2.42-1.4l2.44 1 2-3.46-2.06-1.6c.09-.46.13-.93.13-1.4Zm-8 3.3A3.3 3.3 0 1 1 15.3 12 3.3 3.3 0 0 1 12 15.3Z" fill="currentColor"/></svg>
+                  Settings
+                </span>
+              </nav>
             </div>
           </div>
 
@@ -205,10 +214,10 @@
             <span class="float__icon">
               <svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <span class="float__text"><b>Shift logged</b>8h 30m &middot; +$208.25</span>
+            <span class="float__text"><b>Shift logged</b>8h 15m &middot; +£103.13</span>
           </div>
           <div class="float float--b" aria-hidden="true">
-            <span class="float__text"><b>Next payday</b><span id="floatPayday">Friday, Aug 14</span></span>
+            <span class="float__text"><b>Every job</b>Counted separately</span>
           </div>
         </div>
       </div>
@@ -235,6 +244,17 @@
       </header>
 
       <div class="cards">
+        <article class="card card--wide reveal">
+          <span class="card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9 21.4 7.6 12 12.3 2.6 7.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M2.6 12.4 12 17.1l9.4-4.7M2.6 16.9 12 21.6l9.4-4.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>One card per job</h3>
+            <p>Café in the morning, shop at the weekend? Every job gets its own pay rate, its own pay period and its
+            own payday &mdash; kept apart, and all on one screen.</p>
+          </div>
+        </article>
+
         <article class="card reveal">
           <span class="card__icon">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9.5h18M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="6.8" y="12.6" width="4.2" height="4.2" rx="1.3" fill="currentColor"/></svg>
@@ -297,8 +317,8 @@
       <ol class="steps">
         <li class="step reveal">
           <span class="step__num">1</span>
-          <h3>Set up your pay</h3>
-          <p>Tell PayDrift your pay rate and when your pay period starts and ends. You only do this once.</p>
+          <h3>Add your job</h3>
+          <p>Give it a pay rate and a pay period. Once per job, and the setup is done for good.</p>
         </li>
         <li class="step reveal">
           <span class="step__num">2</span>
@@ -345,29 +365,29 @@
       </div>
 
       <div class="pro__art reveal">
-        <div class="panel" role="img" aria-label="PayDrift insights screen: average earnings of $712.38 per week; a bar chart of the last eight weeks reading $588, $742, $655, $810, $699, $764, $621 and $820 for the current week, with an average line at $712; earnings of $1,247.46 this pay period against $1,392.50 last pay period; and a projected annual income of $37,044.">
+        <div class="panel" role="img" aria-label="PayDrift insights screen: average earnings of £712.38 per week; a bar chart of the last eight weeks reading £588, £742, £655, £810, £699, £764, £621 and £820 for the current week, with an average line at £712; earnings of £1,247.46 this pay period against £1,392.50 last pay period; and a projected annual income of £37,044.">
           <div class="panel__head">
-            <span class="panel__title">Insights</span>
+            <span class="panel__title">Analytics</span>
             <span class="panel__meta">Last 8 weeks</span>
           </div>
 
           <p class="panel__label">Average per week</p>
-          <p class="panel__hero">$712.38</p>
+          <p class="panel__hero">£712.38</p>
 
           <!-- Single series, magnitude over time: bars, one hue.
                Current week in the accent, prior weeks in the de-emphasis step of the same ramp.
                Only the current week is direct-labelled; the rest sit behind the hover value. -->
           <figure class="chart">
             <div class="chart__plot">
-              <div class="chart__avg" style="bottom:79.2%"><span>Avg $712</span></div>
-              <div class="bar" style="--h:65.3%"><span class="bar__fill"></span><span class="bar__tip">$588</span></div>
-              <div class="bar" style="--h:82.4%"><span class="bar__fill"></span><span class="bar__tip">$742</span></div>
-              <div class="bar" style="--h:72.8%"><span class="bar__fill"></span><span class="bar__tip">$655</span></div>
-              <div class="bar" style="--h:90.0%"><span class="bar__fill"></span><span class="bar__tip">$810</span></div>
-              <div class="bar" style="--h:77.7%"><span class="bar__fill"></span><span class="bar__tip">$699</span></div>
-              <div class="bar" style="--h:84.9%"><span class="bar__fill"></span><span class="bar__tip">$764</span></div>
-              <div class="bar" style="--h:69.0%"><span class="bar__fill"></span><span class="bar__tip">$621</span></div>
-              <div class="bar bar--current" style="--h:91.1%"><span class="bar__fill"></span><span class="bar__tip">$820</span><span class="bar__label">$820</span></div>
+              <div class="chart__avg" style="bottom:79.2%"><span>Avg £712</span></div>
+              <div class="bar" style="--h:65.3%"><span class="bar__fill"></span><span class="bar__tip">£588</span></div>
+              <div class="bar" style="--h:82.4%"><span class="bar__fill"></span><span class="bar__tip">£742</span></div>
+              <div class="bar" style="--h:72.8%"><span class="bar__fill"></span><span class="bar__tip">£655</span></div>
+              <div class="bar" style="--h:90.0%"><span class="bar__fill"></span><span class="bar__tip">£810</span></div>
+              <div class="bar" style="--h:77.7%"><span class="bar__fill"></span><span class="bar__tip">£699</span></div>
+              <div class="bar" style="--h:84.9%"><span class="bar__fill"></span><span class="bar__tip">£764</span></div>
+              <div class="bar" style="--h:69.0%"><span class="bar__fill"></span><span class="bar__tip">£621</span></div>
+              <div class="bar bar--current" style="--h:91.1%"><span class="bar__fill"></span><span class="bar__tip">£820</span><span class="bar__label">£820</span></div>
             </div>
             <figcaption class="chart__axis"><span>8 weeks ago</span><span>This week</span></figcaption>
           </figure>
@@ -375,15 +395,15 @@
           <div class="tiles">
             <div class="tile">
               <span class="tile__label">This pay period</span>
-              <span class="tile__value">$1,247.46</span>
+              <span class="tile__value">£1,247.46</span>
             </div>
             <div class="tile">
               <span class="tile__label">Last pay period</span>
-              <span class="tile__value">$1,392.50</span>
+              <span class="tile__value">£1,392.50</span>
             </div>
             <div class="tile tile--wide">
               <span class="tile__label">Projected annual income</span>
-              <span class="tile__value">$37,044</span>
+              <span class="tile__value">£37,044</span>
             </div>
           </div>
         </div>
@@ -443,6 +463,10 @@
           <div class="faq__body"><p>Average earnings per week, a side-by-side look at this pay period and the last one, and a projected annual income based on what you actually work.</p></div>
         </details>
         <details class="faq__item">
+          <summary>Can I track more than one job?</summary>
+          <div class="faq__body"><p>Yes. Add as many jobs as you work. Each one keeps its own pay rate, pay period and payday, and gets its own card on the Overview screen &mdash; so nothing gets mixed together.</p></div>
+        </details>
+        <details class="faq__item">
           <summary>Is there a subscription?</summary>
           <div class="faq__body"><p>No. PayDrift is a single one-time purchase. You pay once and it&rsquo;s yours, including on the other Apple devices signed in to the same Apple ID.</p></div>
         </details>
@@ -487,11 +511,7 @@
   <div class="container site-footer__inner">
     <div class="site-footer__brand">
       <a class="brand" href="index.html" aria-label="PayDrift home">
-        <svg class="brand__mark" viewBox="3 0.5 28.5 28.5" aria-hidden="true" focusable="false">
-          <path d="M19.76 5.66A11 11 0 1 0 26.34 12.24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-          <path d="M12 20 25 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-          <circle cx="28.4" cy="3.6" r="2.5" fill="currentColor"/>
-        </svg>
+        <img class="brand__mark" src="assets/img/logo.svg" alt="" width="30" height="30">
         <span class="brand__name">PayDrift</span>
       </a>
       <p>Made for people who work by the hour.</p>
